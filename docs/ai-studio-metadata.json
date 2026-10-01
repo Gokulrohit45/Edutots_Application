@@ -1,0 +1,6 @@
+{
+  "name": "EDUTOTS — Premium Children's Educational Activities & Binders",
+  "description": "Thoughtfully designed reusable learning activities, flashcards, and busy binders for curious little minds aged 0–6. Mobile-first catalog with seamless WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

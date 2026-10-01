@@ -1,0 +1,13 @@
+{
+  "name": "edutots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EDUTOTS storefront, Flask backend, and Supabase project",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint",
+    "preview": "npm --prefix frontend run preview",
+    "frontend:install": "npm --prefix frontend install"
+  }
+}
