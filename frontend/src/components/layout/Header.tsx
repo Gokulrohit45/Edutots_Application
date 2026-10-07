@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, onOpenAuth }) => {
             </div>
             <a href="/shop?category=bundles" className="flex items-center px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">Bundles &amp; Combos</a>
             <a href={whatsappLink('Hi Edutots! I would like to know more about return gifts and bulk gifting options.')} target="_blank" rel="noopener noreferrer" className="flex items-center px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">Return Gifts</a>
-            <a href="#about-us" className="flex items-center px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">About Us</a>
+            <a href="/#about-us" className="flex items-center px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">About Us</a>
             <a href={whatsappLink('Hi Edutots! I would like to get in touch with your team.')} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">Contact Us <MessageCircle className="h-3.5 w-3.5" /></a>
             <a href="/shop" className="flex items-center px-3 text-[13px] font-semibold text-stone-700 transition-colors hover:text-[#1976A3] 2xl:px-4">Shop All</a>
           </div>

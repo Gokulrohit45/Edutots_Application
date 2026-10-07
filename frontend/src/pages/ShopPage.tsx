@@ -57,12 +57,13 @@ export const ShopPage: React.FC<ShopPageProps> = ({ onQuickView }) => {
     const query = next.toString();
     window.history.pushState({}, '', `/shop${query ? `?${query}` : ''}`);
     setRevision((value) => value + 1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   };
 
   const clearFilters = () => {
     window.history.pushState({}, '', '/shop');
     setRevision((value) => value + 1);
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   };
 
   const filteredProducts = useMemo(() => {

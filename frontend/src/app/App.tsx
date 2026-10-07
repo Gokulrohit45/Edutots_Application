@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { ToastProvider } from '../context/ToastContext';
 import { CartProvider } from '../context/CartContext';
 import { AnnouncementBar } from '../components/layout/AnnouncementBar';
@@ -33,20 +33,50 @@ function MainApp() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
-  const [pathname, setPathname] = useState(() => window.location.pathname);
-
-  useEffect(() => {
-    const handleLocationChange = () => setPathname(window.location.pathname);
-    window.addEventListener('popstate', handleLocationChange);
-    return () => window.removeEventListener('popstate', handleLocationChange);
-  }, []);
+  const currentRoute = () => `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const [route, setRoute] = useState(currentRoute);
+  const pathname = window.location.pathname;
 
   const navigate = (url: string) => {
-    window.history.pushState({}, '', url);
-    setPathname(window.location.pathname);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const destination = new URL(url, window.location.origin);
+    window.history.pushState({}, '', `${destination.pathname}${destination.search}${destination.hash}`);
+    setRoute(currentRoute());
   };
 
+  useEffect(() => {
+    const handleLocationChange = () => setRoute(currentRoute());
+    const handleInternalLink = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (!(event.target instanceof Element)) return;
+      const anchor = event.target.closest('a');
+      if (!anchor || anchor.target === '_blank' || anchor.hasAttribute('download')) return;
+      const href = anchor.getAttribute('href');
+      if (!href || !href.startsWith('/')) return;
+      const destination = new URL(anchor.href, window.location.origin);
+      if (destination.origin !== window.location.origin) return;
+      event.preventDefault();
+      navigate(`${destination.pathname}${destination.search}${destination.hash}`);
+    };
+
+    window.addEventListener('popstate', handleLocationChange);
+    document.addEventListener('click', handleInternalLink);
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      document.removeEventListener('click', handleInternalLink);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    const hash = window.location.hash;
+    if (hash && pathname === '/') {
+      requestAnimationFrame(() => document.querySelector(hash)?.scrollIntoView({ block: 'start' }));
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [route, pathname]);
   const handleSelectAgeGroup = (age: AgeGroup) => {
     navigate('/shop?age=' + age.slug);
   };
@@ -66,7 +96,7 @@ function MainApp() {
         onOpenAuth={() => setIsAuthOpen(true)}
       />      {/* 3. Page Content */}
       {pathname === '/shop' ? (
-        <ShopPage onQuickView={(prod) => setQuickViewProduct(prod)} />
+        <ShopPage key={route} onQuickView={(prod) => setQuickViewProduct(prod)} />
       ) : (
         <main className="flex-1">
           <HeroSlider />

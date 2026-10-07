@@ -74,22 +74,22 @@ export const Footer: React.FC = () => {
             </p>
             <ul className="space-y-2 text-xs text-stone-400">
               <li>
-                <a href="#bestsellers" className="hover:text-white transition-colors">Best Sellers</a>
+                <a href="/#bestsellers" className="hover:text-white transition-colors">Best Sellers</a>
               </li>
               <li>
-                <a href="#shop-by-age" className="hover:text-white transition-colors">Shop by Age</a>
+                <a href="/#shop-by-age" className="hover:text-white transition-colors">Shop by Age</a>
               </li>
               <li>
-                <a href="#shop-by-category" className="hover:text-white transition-colors">Activity Binders</a>
+                <a href="/#shop-by-category" className="hover:text-white transition-colors">Activity Binders</a>
               </li>
               <li>
-                <a href="#shop-by-category" className="hover:text-white transition-colors">Flashcards</a>
+                <a href="/#shop-by-category" className="hover:text-white transition-colors">Flashcards</a>
               </li>
               <li>
-                <a href="#bundles" className="hover:text-white transition-colors">Learning Combos</a>
+                <a href="/#bundles" className="hover:text-white transition-colors">Learning Combos</a>
               </li>
               <li>
-                <a href="#new-launches" className="hover:text-white transition-colors">New Launches</a>
+                <a href="/#new-launches" className="hover:text-white transition-colors">New Launches</a>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
             </p>
             <ul className="space-y-2 text-xs text-stone-400">
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">FAQs</a>
+                <a href="/#faq" className="hover:text-white transition-colors">FAQs</a>
               </li>
               <li>
                 <button onClick={() => handlePhaseNotice('Shipping Policy')} className="hover:text-white text-left">

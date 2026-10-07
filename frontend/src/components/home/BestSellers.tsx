@@ -46,7 +46,7 @@ export const BestSellers: React.FC<BestSellersProps> = ({ onQuickView }) => {
                 Proven to engage toddlers for hours without meltdowns or screens.
               </p>
             </div>
-            <a href="/shop?sort=bestsellers" className="mt-1 flex shrink-0 items-center gap-1 text-sm font-bold text-[#1976A3] hover:underline sm:text-base">
+            <a href="/shop?collection=bestsellers" className="mt-1 flex shrink-0 items-center gap-1 text-sm font-bold text-[#1976A3] hover:underline sm:text-base">
               View All <ArrowRight className="h-4 w-4" />
             </a>
           </div>
