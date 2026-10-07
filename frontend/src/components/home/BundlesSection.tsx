@@ -14,16 +14,16 @@ export const BundlesSection: React.FC = () => {
   };
 
   return (
-    <section id="bundles" className="py-12 sm:py-16 bg-[#FFF0F5]/60 border-b border-[#F1DDE6]">
+    <section id="bundles" className="py-12 sm:py-16 bg-[#FFF0F5]/60 border-b border-[#CFE8F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Navigation Controls */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#E65F8F] mb-1.5">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#38A9D6] mb-1.5">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Bundles &amp; Combos</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#2B1B24]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#17324D]">
               More learning, better value
             </h2>
             <p className="text-sm text-stone-600 mt-1 max-w-xl">
@@ -35,14 +35,14 @@ export const BundlesSection: React.FC = () => {
           <div className="flex items-center gap-2 self-end sm:self-auto">
             <button
               onClick={() => scroll('left')}
-              className="w-10 h-10 rounded-full border border-[#F1DDE6] bg-white text-stone-700 hover:text-black hover:border-stone-400 flex items-center justify-center transition-colors shadow-xs"
+              className="w-10 h-10 rounded-full border border-[#CFE8F3] bg-white text-stone-700 hover:text-black hover:border-stone-400 flex items-center justify-center transition-colors shadow-xs"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-10 h-10 rounded-full border border-[#F1DDE6] bg-white text-stone-700 hover:text-black hover:border-stone-400 flex items-center justify-center transition-colors shadow-xs"
+              className="w-10 h-10 rounded-full border border-[#CFE8F3] bg-white text-stone-700 hover:text-black hover:border-stone-400 flex items-center justify-center transition-colors shadow-xs"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-5 h-5" />

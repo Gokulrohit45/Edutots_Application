@@ -18,10 +18,10 @@ export const Newsletter: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 bg-[#B43B6B] text-white overflow-hidden relative">
+    <section className="py-12 sm:py-16 bg-[#1976A3] text-white overflow-hidden relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold mb-3 border border-white/10">
-          <Sparkles className="w-3.5 h-3.5 text-[#FFD0E0]" />
+          <Sparkles className="w-3.5 h-3.5 text-[#BFE9F7]" />
           <span>Curated for Mindful Parents</span>
         </div>
 
@@ -29,12 +29,12 @@ export const Newsletter: React.FC = () => {
           Playful learning, delivered to your inbox.
         </h2>
 
-        <p className="text-xs sm:text-sm text-[#FCE7F0]/80 max-w-lg mx-auto mt-2 leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#DDF2FA]/80 max-w-lg mx-auto mt-2 leading-relaxed">
           Weekly screen-free activity ideas, developmental milestone checklists, and first access to new binder launches. No spam ever.
         </p>
 
         {isSubscribed ? (
-          <div className="mt-6 p-4 rounded-2xl bg-white/10 border border-white/20 max-w-md mx-auto text-sm font-medium text-[#FCE7F0] animate-in fade-in duration-300">
+          <div className="mt-6 p-4 rounded-2xl bg-white/10 border border-white/20 max-w-md mx-auto text-sm font-medium text-[#DDF2FA] animate-in fade-in duration-300">
             🎉 Thank you for joining our parenting circle! Look out for our welcome guide in your inbox.
           </div>
         ) : (
@@ -47,12 +47,12 @@ export const Newsletter: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address..."
-                className="w-full pl-10 pr-4 py-3 bg-white text-stone-900 placeholder-stone-400 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD0E0]"
+                className="w-full pl-10 pr-4 py-3 bg-white text-stone-900 placeholder-stone-400 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#BFE9F7]"
               />
             </div>
             <button
               type="submit"
-              className="py-3 px-6 bg-[#E65F8F] hover:bg-[#C94675] text-white font-bold text-xs sm:text-sm rounded-xl transition-colors shadow-md shrink-0 active:scale-98"
+              className="py-3 px-6 bg-[#38A9D6] hover:bg-[#16779E] text-white font-bold text-xs sm:text-sm rounded-xl transition-colors shadow-md shrink-0 active:scale-98"
             >
               Join Free
             </button>

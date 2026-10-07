@@ -56,10 +56,10 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-[#2B1B24]/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="w-full max-w-3xl mx-auto bg-white h-dvh sm:h-auto sm:max-h-[calc(100dvh-4rem)] rounded-none sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col mt-0 sm:mt-8 border border-[#F1DDE6]">
+    <div className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-[#17324D]/60 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="w-full max-w-3xl mx-auto bg-white h-dvh sm:h-auto sm:max-h-[calc(100dvh-4rem)] rounded-none sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col mt-0 sm:mt-8 border border-[#CFE8F3]">
         {/* Search Input Bar */}
-        <div className="flex items-center gap-2 sm:gap-3 p-3 sm:p-5 border-b border-[#F1DDE6] bg-[#FFFAFC]">
+        <div className="flex items-center gap-2 sm:gap-3 p-3 sm:p-5 border-b border-[#CFE8F3] bg-[#F7FCFF]">
           <Search className="w-5 h-5 text-stone-400 shrink-0" />
           <input
             ref={inputRef}
@@ -67,7 +67,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search by age (e.g. 2 years), activity, or skill..."
-            className="min-w-0 w-full text-sm sm:text-lg bg-transparent text-[#2B1B24] placeholder-stone-400 focus:outline-none"
+            className="min-w-0 w-full text-sm sm:text-lg bg-transparent text-[#17324D] placeholder-stone-400 focus:outline-none"
           />
           {query && (
             <button
@@ -80,7 +80,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
           )}
           <button
             onClick={onClose}
-            className="p-2 text-stone-500 hover:text-[#2B1B24] rounded-full hover:bg-stone-100 transition-colors"
+            className="p-2 text-stone-500 hover:text-[#17324D] rounded-full hover:bg-stone-100 transition-colors"
             aria-label="Close search"
           >
             <X className="w-5 h-5" />
@@ -98,7 +98,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                     <button
                       key={pick.label}
                       onClick={() => setQuery(pick.q)}
-                      className="px-3.5 py-1.5 text-xs font-medium bg-[#FFF4F8] hover:bg-[#FCE7F0] hover:text-[#B43B6B] text-stone-700 rounded-lg transition-colors border border-[#F1DDE6]"
+                      className="px-3.5 py-1.5 text-xs font-medium bg-[#EEF8FD] hover:bg-[#DDF2FA] hover:text-[#1976A3] text-stone-700 rounded-lg transition-colors border border-[#CFE8F3]"
                     >
                       {pick.label}
                     </button>
@@ -114,9 +114,9 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                       key={age.id}
                       href={`#${age.slug}`}
                       onClick={onClose}
-                      className="p-3 bg-[#FFFAFC] hover:bg-[#FCE7F0]/60 border border-[#F1DDE6] rounded-xl text-left transition-colors group"
+                      className="p-3 bg-[#F7FCFF] hover:bg-[#DDF2FA]/60 border border-[#CFE8F3] rounded-xl text-left transition-colors group"
                     >
-                      <span className="block text-sm font-bold text-[#2B1B24] group-hover:text-[#B43B6B]">{age.label}</span>
+                      <span className="block text-sm font-bold text-[#17324D] group-hover:text-[#1976A3]">{age.label}</span>
                       <span className="block text-[11px] text-stone-500 mt-0.5 line-clamp-1">{age.sublabel}</span>
                     </a>
                   ))}
@@ -134,13 +134,13 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                         key={age.id}
                         href="#shop-by-age"
                         onClick={onClose}
-                        className="flex items-center justify-between p-3 rounded-xl bg-[#FCE7F0]/60 border border-[#B43B6B]/15 hover:bg-[#FCE7F0] transition-colors"
+                        className="flex items-center justify-between p-3 rounded-xl bg-[#DDF2FA]/60 border border-[#1976A3]/15 hover:bg-[#DDF2FA] transition-colors"
                       >
                         <div>
-                          <p className="text-sm font-bold text-[#B43B6B]">{age.label}</p>
+                          <p className="text-sm font-bold text-[#1976A3]">{age.label}</p>
                           <p className="text-xs text-stone-600 line-clamp-1">{age.description}</p>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-[#B43B6B] shrink-0 ml-2" />
+                        <ArrowRight className="w-4 h-4 text-[#1976A3] shrink-0 ml-2" />
                       </a>
                     ))}
                   </div>
@@ -152,7 +152,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                   Products ({filteredProducts.length})
                 </p>
                 {filteredProducts.length === 0 ? (
-                  <div className="text-center py-10 bg-[#FFFAFC] rounded-2xl border border-dashed border-[#F1DDE6]">
+                  <div className="text-center py-10 bg-[#F7FCFF] rounded-2xl border border-dashed border-[#CFE8F3]">
                     <Sparkles className="w-8 h-8 text-stone-300 mx-auto mb-2" />
                     <p className="text-sm font-medium text-stone-700">No matching activities found</p>
                     <p className="text-xs text-stone-500 mt-1 max-w-sm mx-auto">
@@ -164,7 +164,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                     {filteredProducts.map((product) => (
                       <div
                         key={product.id}
-                        className="flex items-center gap-2.5 sm:gap-3.5 p-2.5 sm:p-3 rounded-xl hover:bg-[#FFF4F8] border border-[#F1DDE6] transition-colors group cursor-pointer"
+                        className="flex items-center gap-2.5 sm:gap-3.5 p-2.5 sm:p-3 rounded-xl hover:bg-[#EEF8FD] border border-[#CFE8F3] transition-colors group cursor-pointer"
                         onClick={() => {
                           onSelectProduct(product);
                           onClose();
@@ -187,13 +187,13 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                             <span>·</span>
                             <span>{product.category}</span>
                           </div>
-                          <p className="text-sm font-semibold text-[#2B1B24] truncate group-hover:text-[#B43B6B]">
+                          <p className="text-sm font-semibold text-[#17324D] truncate group-hover:text-[#1976A3]">
                             {product.name}
                           </p>
                           <div className="flex items-center gap-2 mt-0.5">
-                            <span className="text-sm font-bold text-[#2B1B24]">₹{product.price}</span>
+                            <span className="text-sm font-bold text-[#17324D]">₹{product.price}</span>
                             <span className="text-xs text-stone-400 line-through">₹{product.mrp}</span>
-                            <span className="text-[11px] text-[#B43B6B] font-medium">Save ₹{product.mrp - product.price}</span>
+                            <span className="text-[11px] text-[#1976A3] font-medium">Save ₹{product.mrp - product.price}</span>
                           </div>
                         </div>
                         <div className="shrink-0 flex items-center gap-2">
@@ -203,7 +203,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
                               e.stopPropagation();
                               addToCart(product);
                             }}
-                            className="px-2.5 sm:px-3 py-2 text-xs font-semibold bg-[#B43B6B] text-white rounded-lg hover:bg-[#922C55] transition-colors"
+                            className="px-2.5 sm:px-3 py-2 text-xs font-semibold bg-[#1976A3] text-white rounded-lg hover:bg-[#125A7A] transition-colors"
                           >
                             + Add
                           </button>

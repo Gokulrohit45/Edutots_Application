@@ -4,14 +4,14 @@ import { Heart, Instagram } from 'lucide-react';
 
 export const CommunitySection: React.FC = () => {
   return (
-    <section className="py-12 sm:py-16 bg-[#FFFAFC]">
+    <section className="py-12 sm:py-16 bg-[#F7FCFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B43B6B] mb-2">
-            <Instagram className="w-3.5 h-3.5 text-[#E65F8F]" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1976A3] mb-2">
+            <Instagram className="w-3.5 h-3.5 text-[#38A9D6]" />
             <span>@edutots.learning</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#2B1B24]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#17324D]">
             Growing little minds, one activity at a time.
           </h2>
           <p className="text-sm sm:text-base text-stone-600 mt-2">
@@ -23,7 +23,7 @@ export const CommunitySection: React.FC = () => {
           {instagramCommunityPosts.map((post) => (
             <div
               key={post.id}
-              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-100 border border-[#F1DDE6] aspect-square flex flex-col"
+              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-100 border border-[#CFE8F3] aspect-square flex flex-col"
             >
               <img
                 src={post.image}

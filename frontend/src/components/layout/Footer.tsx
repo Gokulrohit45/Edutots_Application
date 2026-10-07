@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="about-us" className="bg-[#2B1B24] text-stone-300 pt-14 pb-8 border-t border-stone-800">
+    <footer id="about-us" className="bg-[#17324D] text-stone-300 pt-14 pb-8 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 pb-12 border-b border-stone-800">
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-[#B43B6B] text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
+                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-[#1976A3] text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-[#B43B6B] text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
+                className="w-9 h-9 rounded-full bg-stone-900 hover:bg-[#1976A3] text-stone-300 hover:text-white flex items-center justify-center transition-colors border border-stone-800"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />

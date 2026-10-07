@@ -56,7 +56,7 @@ function MainApp() {
   };
 
   return (
-    <div id="top" className="min-h-screen flex flex-col bg-[#FFFAFC] text-[#2B1B24] selection:bg-[#FCE7F0] selection:text-[#B43B6B]">
+    <div id="top" className="min-h-screen flex flex-col bg-[#F7FCFF] text-[#17324D] selection:bg-[#DDF2FA] selection:text-[#1976A3]">
       {/* 1. Global Announcement Bar */}
       <AnnouncementBar />
 

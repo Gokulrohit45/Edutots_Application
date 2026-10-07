@@ -30,13 +30,13 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-2xl bg-white h-dvh sm:h-auto rounded-none sm:rounded-3xl shadow-2xl overflow-hidden max-h-dvh sm:max-h-[92vh] flex flex-col border border-[#F1DDE6]"
+        className="relative w-full max-w-2xl bg-white h-dvh sm:h-auto rounded-none sm:rounded-3xl shadow-2xl overflow-hidden max-h-dvh sm:max-h-[92vh] flex flex-col border border-[#CFE8F3]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm text-stone-600 hover:text-stone-950 flex items-center justify-center border border-[#F1DDE6] shadow-sm transition-colors"
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm text-stone-600 hover:text-stone-950 flex items-center justify-center border border-[#CFE8F3] shadow-sm transition-colors"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -47,7 +47,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 items-start">
             {/* Gallery */}
             <div className="space-y-2.5">
-              <div className="w-full aspect-[4/3] rounded-2xl bg-[#FFF4F8] overflow-hidden border border-[#F1DDE6] relative">
+              <div className="w-full aspect-[4/3] rounded-2xl bg-[#EEF8FD] overflow-hidden border border-[#CFE8F3] relative">
                 <img
                   src={product.images[selectedImg] || product.images[0]}
                   alt={product.name}
@@ -58,7 +58,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                   }}
                 />
                 {product.badge && (
-                  <span className="absolute top-3 left-3 bg-[#B43B6B] text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  <span className="absolute top-3 left-3 bg-[#1976A3] text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-sm">
                     {product.badge}
                   </span>
                 )}
@@ -71,7 +71,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                       key={idx}
                       onClick={() => setSelectedImg(idx)}
                       className={`w-14 h-14 rounded-lg overflow-hidden border-2 shrink-0 transition-colors ${
-                        selectedImg === idx ? 'border-[#B43B6B]' : 'border-stone-200'
+                        selectedImg === idx ? 'border-[#1976A3]' : 'border-stone-200'
                       }`}
                     >
                       <img src={img} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -83,19 +83,19 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
             {/* Core Info */}
             <div className="space-y-3">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#B43B6B]">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#1976A3]">
                 <span>{product.ageRange}</span>
                 <span>·</span>
                 <span className="text-stone-500 font-normal">{product.category}</span>
               </div>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#2B1B24] leading-snug">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#17324D] leading-snug">
                 {product.name}
               </h2>
 
               {/* Rating */}
               <div className="flex items-center gap-2">
-                <div className="flex items-center text-[#E65F8F]">
+                <div className="flex items-center text-[#38A9D6]">
                   <Star className="w-4 h-4 fill-current" />
                   <span className="text-xs font-bold text-stone-800 ml-1">{product.rating}</span>
                 </div>
@@ -105,9 +105,9 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
               {/* Price */}
               <div className="flex items-baseline gap-2.5 pt-1">
-                <span className="text-2xl font-bold text-[#2B1B24]">₹{product.price}</span>
+                <span className="text-2xl font-bold text-[#17324D]">₹{product.price}</span>
                 <span className="text-sm text-stone-400 line-through">₹{product.mrp}</span>
-                <span className="text-xs font-semibold text-[#B43B6B] bg-[#FCE7F0] px-2 py-0.5 rounded-md">
+                <span className="text-xs font-semibold text-[#1976A3] bg-[#DDF2FA] px-2 py-0.5 rounded-md">
                   Save ₹{product.mrp - product.price}
                 </span>
               </div>
@@ -117,17 +117,17 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
               </p>
 
               {/* Key Highlights */}
-              <div className="space-y-1.5 pt-2 border-t border-[#F1DDE6] text-xs text-stone-600">
+              <div className="space-y-1.5 pt-2 border-t border-[#CFE8F3] text-xs text-stone-600">
                 <div className="flex items-center gap-2">
-                  <RefreshCw className="w-3.5 h-3.5 text-[#B43B6B] shrink-0" />
+                  <RefreshCw className="w-3.5 h-3.5 text-[#1976A3] shrink-0" />
                   <span>100% Reusable & wipe-clean material</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#B43B6B] shrink-0" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#1976A3] shrink-0" />
                   <span>Curved child-safe safety corners (No sharp edges)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Box className="w-3.5 h-3.5 text-[#B43B6B] shrink-0" />
+                  <Box className="w-3.5 h-3.5 text-[#1976A3] shrink-0" />
                   <span>Direct WhatsApp ordering — No online payment gateway</span>
                 </div>
               </div>
@@ -136,15 +136,15 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
           {/* What's Included */}
           {product.includedItems && product.includedItems.length > 0 && (
-            <div className="bg-[#FFF4F8] p-4 rounded-2xl border border-[#F1DDE6]">
+            <div className="bg-[#EEF8FD] p-4 rounded-2xl border border-[#CFE8F3]">
               <p className="text-xs font-bold uppercase tracking-wider text-stone-700 mb-2.5 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#E65F8F]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#38A9D6]" />
                 Everything inside the box:
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-stone-600">
                 {product.includedItems.map((item, i) => (
                   <li key={i} className="flex items-start gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-[#B43B6B] shrink-0 mt-0.5" />
+                    <Check className="w-3.5 h-3.5 text-[#1976A3] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -153,9 +153,9 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
           )}
 
           {/* Action Row */}
-          <div className="pt-3 border-t border-[#F1DDE6] flex flex-col md:flex-row items-center gap-3">
+          <div className="pt-3 border-t border-[#CFE8F3] flex flex-col md:flex-row items-center gap-3">
             {/* Quantity */}
-            <div className="flex items-center border border-[#F1DDE6] rounded-xl bg-[#FFFAFC] p-1 w-full md:w-auto justify-between md:justify-start">
+            <div className="flex items-center border border-[#CFE8F3] rounded-xl bg-[#F7FCFF] p-1 w-full md:w-auto justify-between md:justify-start">
               <button
                 type="button"
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -178,7 +178,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
             {/* Add to Cart */}
             <button
               onClick={handleAddToCart}
-              className="w-full md:flex-1 h-12 bg-[#B43B6B] hover:bg-[#922C55] text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-colors"
+              className="w-full md:flex-1 h-12 bg-[#1976A3] hover:bg-[#125A7A] text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-colors"
             >
               Add to Cart · ₹{product.price * quantity}
             </button>

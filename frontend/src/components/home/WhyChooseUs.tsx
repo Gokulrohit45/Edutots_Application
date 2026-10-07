@@ -7,13 +7,13 @@ export const WhyChooseUs: React.FC = () => {
       icon: EyeOff,
       title: '100% Screen-Free Play',
       description: 'Replace addictive screens and YouTube tantrums with tangible, tactile discovery that holds organic attention.',
-      color: 'bg-[#FCE7F0] text-[#B43B6B]',
+      color: 'bg-[#DDF2FA] text-[#1976A3]',
     },
     {
       icon: Hand,
       title: 'Engineered for Little Hands',
       description: 'Chunky rounded corners, easy-peel velcro cutouts, and saliva-safe materials crafted for developing pincer grips.',
-      color: 'bg-[#FFF0F5] text-[#E65F8F]',
+      color: 'bg-[#FFF0F5] text-[#38A9D6]',
     },
     {
       icon: RefreshCw,
@@ -36,13 +36,13 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section id="about-us" className="py-12 sm:py-16 lg:py-20 bg-[#FFFAFC]">
+    <section id="about-us" className="py-12 sm:py-16 lg:py-20 bg-[#F7FCFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#B43B6B] mb-2">
+          <p className="text-xs font-bold uppercase tracking-wider text-[#1976A3] mb-2">
             The EDUTOTS Difference
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#2B1B24]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#17324D]">
             Why mindful parents choose EDUTOTS
           </h2>
           <p className="text-sm sm:text-base text-stone-600 mt-2">
@@ -56,14 +56,14 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-5 sm:p-6 border border-[#F1DDE6] hover:shadow-md transition-all duration-300 flex flex-col text-left"
+                className="bg-white rounded-3xl p-5 sm:p-6 border border-[#CFE8F3] hover:shadow-md transition-all duration-300 flex flex-col text-left"
               >
                 <div
                   className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 ${reason.color}`}
                 >
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-[#2B1B24] mb-1.5 leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-[#17324D] mb-1.5 leading-snug">
                   {reason.title}
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">

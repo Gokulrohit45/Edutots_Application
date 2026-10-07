@@ -20,15 +20,15 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
   const videoProducts = productsData.filter((p) => Boolean(p.video)).slice(0, 3);
 
   return (
-    <section id="products-in-action" className="py-12 sm:py-16 bg-[#FFF4F8] border-y border-[#F1DDE6]">
+    <section id="products-in-action" className="py-12 sm:py-16 bg-[#EEF8FD] border-y border-[#CFE8F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B43B6B] mb-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#E65F8F]" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1976A3] mb-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#38A9D6]" />
             <span>Real Play Sessions</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#2B1B24]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#17324D]">
             See learning in action
           </h2>
           <p className="text-sm sm:text-base text-stone-600 mt-2">
@@ -43,7 +43,7 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
             return (
               <div
                 key={product.id}
-                className="group bg-white rounded-3xl border border-[#F1DDE6] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="group bg-white rounded-3xl border border-[#CFE8F3] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 {/* Video Thumbnail with Play Button */}
                 <div
@@ -69,7 +69,7 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
 
                   {/* Play Button Indicator */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-13 h-13 rounded-full bg-white/95 text-[#B43B6B] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-13 h-13 rounded-full bg-white/95 text-[#1976A3] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Play className="w-5 h-5 fill-current ml-0.5" />
                     </div>
                   </div>
@@ -82,17 +82,17 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
 
                 {/* Info & Product Link */}
                 <div className="p-4 sm:p-5 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 text-xs font-semibold text-[#B43B6B] mb-1">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-[#1976A3] mb-1">
                     <span>{product.ageRange}</span>
                     <span>·</span>
                     <span className="text-stone-500 font-normal">{product.category}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm font-semibold text-[#2B1B24] line-clamp-2 mb-3">
+                  <p className="text-xs sm:text-sm font-semibold text-[#17324D] line-clamp-2 mb-3">
                     {video.title}
                   </p>
 
-                  <div className="mt-auto pt-3 border-t border-[#F1DDE6] flex items-center justify-between">
+                  <div className="mt-auto pt-3 border-t border-[#CFE8F3] flex items-center justify-between">
                     <div>
                       <span className="text-xs text-stone-500 block">Featured Activity:</span>
                       <span className="text-xs font-bold text-stone-900 line-clamp-1">{product.name}</span>
@@ -100,7 +100,7 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
 
                     <button
                       onClick={() => onQuickView(product)}
-                      className="px-3 py-1.5 text-xs font-semibold bg-[#FCE7F0] text-[#B43B6B] hover:bg-[#B43B6B] hover:text-white rounded-lg transition-colors flex items-center gap-1 shrink-0 ml-2"
+                      className="px-3 py-1.5 text-xs font-semibold bg-[#DDF2FA] text-[#1976A3] hover:bg-[#1976A3] hover:text-white rounded-lg transition-colors flex items-center gap-1 shrink-0 ml-2"
                     >
                       <span>View</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -157,7 +157,7 @@ export const ProductsInAction: React.FC<ProductsInActionProps> = ({ onQuickView 
                       addToCart(activeVideo.product, 1);
                       setActiveVideo(null);
                     }}
-                    className="flex-1 sm:flex-initial px-4 py-2.5 bg-[#B43B6B] text-white text-xs font-semibold rounded-xl hover:bg-[#922C55]"
+                    className="flex-1 sm:flex-initial px-4 py-2.5 bg-[#1976A3] text-white text-xs font-semibold rounded-xl hover:bg-[#125A7A]"
                   >
                     + Add to Cart
                   </button>

@@ -15,7 +15,7 @@ export const WhatsAppSupportButton: React.FC = () => {
     <div className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end pointer-events-none">
       {/* Tooltip / Prompt bubble */}
       {showTooltip && (
-        <div className="pointer-events-auto mb-2 flex items-center gap-2 px-3 py-2 bg-white text-[#2B1B24] rounded-2xl shadow-lg border border-[#F1DDE6] text-xs font-medium animate-in fade-in slide-in-from-bottom-2 duration-300 max-w-[210px]">
+        <div className="pointer-events-auto mb-2 flex items-center gap-2 px-3 py-2 bg-white text-[#17324D] rounded-2xl shadow-lg border border-[#CFE8F3] text-xs font-medium animate-in fade-in slide-in-from-bottom-2 duration-300 max-w-[210px]">
           <span className="w-2 h-2 rounded-full bg-[#25D366] shrink-0" />
           <span className="line-clamp-1">Chat with us on WhatsApp</span>
           <button

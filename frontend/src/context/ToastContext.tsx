@@ -40,7 +40,7 @@ export const ToastProvider: React.FC<{ children: ReactNode }> = ({ children }) =
             key={toast.id}
             role="status"
             aria-live="polite"
-            className="pointer-events-auto flex items-center gap-2.5 px-4 py-3 bg-[#2B1B24] text-white text-xs sm:text-sm font-medium rounded-xl shadow-xl shadow-black/15 transition-all animate-in fade-in slide-in-from-bottom-2 duration-200"
+            className="pointer-events-auto flex items-center gap-2.5 px-4 py-3 bg-[#17324D] text-white text-xs sm:text-sm font-medium rounded-xl shadow-xl shadow-black/15 transition-all animate-in fade-in slide-in-from-bottom-2 duration-200"
           >
             <span className="w-2 h-2 rounded-full bg-[#4ADE80] shrink-0" />
             <span>{toast.message}</span>
